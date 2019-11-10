@@ -1,0 +1,218 @@
+﻿<Controls:MetroWindow x:Class="WpfApp4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:WpfApp4"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+         Title="主選單" Height="450" Width="800">
+    <Controls:MetroWindow.LeftWindowCommands >
+        <Controls:WindowCommands Margin="60,0,0,0">
+            <iconPacks:PackIconModern Kind="Beer" VerticalAlignment="Center"/>
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.LeftWindowCommands>
+    <Controls:MetroWindow.RightWindowCommands >
+        <Controls:WindowCommands>
+            <Button>
+                <iconPacks:PackIconModern  Kind="People" />
+            </Button>
+            <TextBlock Text="Account" VerticalAlignment="Center" Margin="5"/>
+            <StackPanel Orientation="Horizontal" Margin="5,0,15,0" VerticalAlignment="Center" >
+                <Button VerticalContentAlignment="Center">
+                    <iconPacks:PackIconModern  Kind="Message" Width="13" Margin="0,3,0,0"/>
+                </Button>
+                <Controls:Badged Width="0" Badge="3" Height="15" >
+                    <Button/>
+                </Controls:Badged>
+            </StackPanel>
+
+
+            <Button Content="設定"/>
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.RightWindowCommands>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Background="LightGray">
+            <TextBox Controls:TextBoxHelper.ClearTextButton="True"
+                     Controls:TextBoxHelper.UseFloatingWatermark="True"
+                     Controls:TextBoxHelper.Watermark="Search..." BorderThickness="0" Width="150" VerticalContentAlignment="Center">
+                <TextBox.Style>
+                    <Style BasedOn="{StaticResource SearchMetroTextBox}" TargetType="{x:Type TextBox}">
+                        <Style.Triggers>
+                            <Trigger Property="Controls:TextBoxHelper.HasText" Value="True">
+                                <Setter Property="Controls:TextBoxHelper.ButtonContent" Value="r" />
+                                <Setter Property="Controls:TextBoxHelper.ButtonContentTemplate" Value="{x:Null}" />
+                            </Trigger>
+                        </Style.Triggers>
+                        <Setter Property="Background" Value="#E0E0E0"/>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
+            <Button Content="Favorite" IsEnabled="False"/>
+            <Button Content="Financials" />
+            <Button Content="CRM" />
+            <Button Content="Sales" />
+            <Button Content="Project Management" />
+            <Button Content="Punchasing"/>
+            <Button Content="Inventory" />
+            <Button Content="Customer Service" />
+            <Button Content="..." HorizontalAlignment="Right" />
+        </StackPanel>
+        <Grid Grid.Row="1" Background="LightBlue">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="210"/>
+                <ColumnDefinition Width="30"/>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Row="1" Grid.Column="1" Controls:TextBoxHelper.ClearTextButton="True"
+                     Controls:TextBoxHelper.UseFloatingWatermark="True"
+                     Controls:TextBoxHelper.Watermark="Search customers, paths, documents and more" BorderThickness="0" VerticalContentAlignment="Center">
+                <TextBox.Style>
+                    <Style BasedOn="{StaticResource SearchMetroTextBox}" TargetType="{x:Type TextBox}">
+                        <Style.Triggers>
+                            <Trigger Property="Controls:TextBoxHelper.HasText" Value="True">
+                                <Setter Property="Controls:TextBoxHelper.ButtonContent" Value="r" />
+                                <Setter Property="Controls:TextBoxHelper.ButtonContentTemplate" Value="{x:Null}" />
+                            </Trigger>
+                        </Style.Triggers>
+                        <Setter Property="Background" Value="#E0E0E0"/>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
+            <ScrollViewer  Grid.Row="2" Grid.Column="1" VerticalScrollBarVisibility="Auto">
+                <WrapPanel Orientation="Horizontal">
+                    <Controls:Tile>
+                        <StackPanel Orientation="Vertical">
+                            <iconPacks:PackIconModern Kind="List" Width="200"/>
+                            <TextBlock Text="Sales Invoices" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Controls:Tile>
+                    <Controls:Tile>
+                        <StackPanel Orientation="Vertical">
+                            <iconPacks:PackIconModern Kind="List" Width="200"/>
+                            <TextBlock Text="Sales Invoices" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Controls:Tile>
+                    <Controls:Tile>
+                        <StackPanel Orientation="Vertical">
+                            <iconPacks:PackIconModern Kind="List" Width="200"/>
+                            <TextBlock Text="Sales Invoices" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Controls:Tile>
+                    <Controls:Tile>
+                        <StackPanel Orientation="Vertical">
+                            <iconPacks:PackIconModern Kind="List" Width="200"/>
+                            <TextBlock Text="Sales Invoices" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Controls:Tile>
+                    <Controls:Tile>
+                        <StackPanel Orientation="Vertical">
+                            <iconPacks:PackIconModern Kind="List" Width="200"/>
+                            <TextBlock Text="Sales Invoices" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Controls:Tile>
+                    <Controls:Tile>
+                        <StackPanel Orientation="Vertical">
+                            <iconPacks:PackIconModern Kind="List" Width="200"/>
+                            <TextBlock Text="Sales Invoices" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Controls:Tile>
+                    <Controls:Tile>
+                        <StackPanel Orientation="Vertical">
+                            <iconPacks:PackIconModern Kind="List" Width="200"/>
+                            <TextBlock Text="Sales Invoices" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Controls:Tile>
+                    <Controls:Tile>
+                        <StackPanel Orientation="Vertical">
+                            <iconPacks:PackIconModern Kind="List" Width="200"/>
+                            <TextBlock Text="Sales Invoices" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Controls:Tile>
+                    <Controls:Tile>
+                        <StackPanel Orientation="Vertical">
+                            <iconPacks:PackIconModern Kind="List" Width="200"/>
+                            <TextBlock Text="Sales Invoices" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Controls:Tile>
+                    <Controls:Tile>
+                        <StackPanel Orientation="Vertical">
+                            <iconPacks:PackIconModern Kind="List" Width="200"/>
+                            <TextBlock Text="Sales Invoices" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Controls:Tile>
+                </WrapPanel>
+            </ScrollViewer>
+            <TreeView Opacity="0.8"  Grid.Row="2" Grid.Column="2" ItemsSource="{Binding Artists}" Style="{StaticResource VirtualisedMetroTreeView}" Margin="0,0,0,3">
+                <TreeViewItem Header="Formula Data Management1">
+                    <TreeViewItem Header="Formula Data Management1-1"></TreeViewItem>
+                    <TreeViewItem Header="Formula Data Management1-2"></TreeViewItem>
+                    <TreeViewItem Header="Formula Data Management1-3"></TreeViewItem>
+                </TreeViewItem>
+                <TreeViewItem Header="Formula Data Management2">
+                    <TreeViewItem Header="Formula Data Management2-1"></TreeViewItem>
+                    <TreeViewItem Header="Formula Data Management2-2"></TreeViewItem>
+                </TreeViewItem>
+                <TreeViewItem Header="Formula Data Management1">
+                    <TreeViewItem Header="Formula Data Management1-1"></TreeViewItem>
+                    <TreeViewItem Header="Formula Data Management1-2"></TreeViewItem>
+                    <TreeViewItem Header="Formula Data Management1-3"></TreeViewItem>
+                </TreeViewItem>
+                <TreeViewItem Header="Formula Data Management2">
+                    <TreeViewItem Header="Formula Data Management2-1"></TreeViewItem>
+                    <TreeViewItem Header="Formula Data Management2-2"></TreeViewItem>
+                </TreeViewItem>
+                <TreeViewItem Header="Formula Data Management1">
+                    <TreeViewItem Header="Formula Data Management1-1"></TreeViewItem>
+                    <TreeViewItem Header="Formula Data Management1-2"></TreeViewItem>
+                    <TreeViewItem Header="Formula Data Management1-3"></TreeViewItem>
+                </TreeViewItem>
+                <TreeViewItem Header="Formula Data Management2">
+                    <TreeViewItem Header="Formula Data Management2-1"></TreeViewItem>
+                    <TreeViewItem Header="Formula Data Management2-2"></TreeViewItem>
+                </TreeViewItem>
+                <TreeViewItem Header="Formula Data Management1">
+                    <TreeViewItem Header="Formula Data Management1-1"></TreeViewItem>
+                    <TreeViewItem Header="Formula Data Management1-2"></TreeViewItem>
+                    <TreeViewItem Header="Formula Data Management1-3"></TreeViewItem>
+                </TreeViewItem>
+                <TreeViewItem Header="Formula Data Management2">
+                    <TreeViewItem Header="Formula Data Management2-1"></TreeViewItem>
+                    <TreeViewItem Header="Formula Data Management2-2"></TreeViewItem>
+                </TreeViewItem>
+                <TreeViewItem Header="Formula Data Management1">
+                    <TreeViewItem Header="Formula Data Management1-1"></TreeViewItem>
+                    <TreeViewItem Header="Formula Data Management1-2"></TreeViewItem>
+                    <TreeViewItem Header="Formula Data Management1-3"></TreeViewItem>
+                </TreeViewItem>
+                <TreeViewItem Header="Formula Data Management2">
+                    <TreeViewItem Header="Formula Data Management2-1"></TreeViewItem>
+                    <TreeViewItem Header="Formula Data Management2-2"></TreeViewItem>
+                </TreeViewItem>
+                    <!--<TreeView.ItemTemplate>
+                    <HierarchicalDataTemplate ItemsSource="{Binding Albums}">
+                        <TextBlock Text="{Binding Name}" />
+                        <HierarchicalDataTemplate.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Title}" />
+                            </DataTemplate>
+                        </HierarchicalDataTemplate.ItemTemplate>
+                    </HierarchicalDataTemplate>
+                </TreeView.ItemTemplate>-->
+            </TreeView>
+        </Grid>
+
+    </Grid>
+</Controls:MetroWindow>
